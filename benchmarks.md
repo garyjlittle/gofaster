@@ -2,11 +2,14 @@
 
 ## Benchmarks and workloads
 There is no shortage of  benchmarks and workload generators, I group them into the following categories
+
 ### IO / Storage Benchmarks - Simulate a particular application or workload
-* Application Benchmarks
+#### Application Benchmarks
 * JetStress - simulates IO of a Microsoft exchange database server
-* Workload Benchmarks
-** SFS 97/2008 - simulates the IO workload pattern of an email server
+#### Workload Benchmarks
+* SFS 97/2008 - simulates the IO workload pattern of an email server
+* SPC-1 - simulates database workloads.
+
 ### IO / Storage Workload Generators - Create your own workload pattern
 * IOmeter - one of the most well-known, popular with Windows users.  Allows client-server deployment
 * vdbench - Java based IO generator, popular due to its configurability. Allows client-server deployment
@@ -23,10 +26,10 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 * Benchmark Factory (Commercial) - Like HammerDB it simulated a variety 
 
 ### Virtualization Benchmarks
-* VMmark
-* SPECVirt
-* TPCx-V
-* TPCx-HCI
+* VMmark - VMWare hypervisor only.  Mostly used to test host hrdware/CPU/Memory.
+* SPECVirt - 
+* TPCx-V - Measures density of VMs running OLTP workloads. Hypervisor agnostic
+* TPCx-HCI  - Measures density of VMs running OLTP workloads on HCI infrastructure.  Hypervisor agnostic.
 
 
 
@@ -35,7 +38,7 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 
 ```
 Proof of Concept
-·         Intro to different benchmarking tools (, , , , , Vmmark, etc.)
+·         Intro to different benchmarking tools (, , , , , , etc.)
 o    Gary Little
 o    Conversational/supporting materials
 o    Does it have a place in evaluating HCI or not?
