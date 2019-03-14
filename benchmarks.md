@@ -8,8 +8,6 @@
     + [Application Benchmarks](#application-benchmarks-1)
     + [Virtualization Benchmarks](#virtualization-benchmarks)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # Benchmarks
 
 ## Benchmarks and workloads
@@ -20,6 +18,7 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 * JetStress - simulates IO of a Microsoft exchange database server
 #### Workload Benchmarks
 * SFS 97/2008 - simulates the IO workload pattern of an email server
+* SFS 2016? - varios IO profiles
 * SPC-1 - simulates database workloads.
 
 ### IO / Storage Workload Generators - Create your own workload pattern
