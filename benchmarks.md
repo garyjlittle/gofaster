@@ -1,3 +1,15 @@
+- [Benchmarks](#benchmarks)
+  * [Benchmarks and workloads](#benchmarks-and-workloads)
+    + [IO / Storage Benchmarks - Simulate a particular application or workload](#io---storage-benchmarks---simulate-a-particular-application-or-workload)
+      - [Application Benchmarks](#application-benchmarks)
+      - [Workload Benchmarks](#workload-benchmarks)
+    + [IO / Storage Workload Generators - Create your own workload pattern](#io---storage-workload-generators---create-your-own-workload-pattern)
+  * [Orchestrators](#orchestrators)
+    + [Application Benchmarks](#application-benchmarks-1)
+    + [Virtualization Benchmarks](#virtualization-benchmarks)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # Benchmarks
 
 ## Benchmarks and workloads
