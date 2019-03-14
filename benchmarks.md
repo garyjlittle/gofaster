@@ -24,8 +24,8 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 ### IO / Storage Workload Generators - Create your own workload pattern
 * IOmeter - one of the most well-known, popular with Windows users.  Allows client-server deployment
 * vdbench - Java based IO generator, popular due to its configurability. Allows client-server deployment
-* fio
-* bonnie
+* fio - C based IO generator, versatile and very popular on Linux, written by the maintainer of the Linux SCSI stack
+* bonnie++ - Has some built-in workloads
 
 ## Orchestrators
 * HCIbench - orchestrates vdbench.  Can all workloads are uniform (e.g. all VM's run same workload)
@@ -37,11 +37,10 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 * Benchmark Factory (Commercial) - Like HammerDB it simulated a variety 
 
 ### Virtualization Benchmarks
-* VMmark - VMWare hypervisor only.  Mostly used to test host hrdware/CPU/Memory.
-* SPECVirt - 
+* VMmark - VMWare hypervisor only.  Mostly used to test host hrdware/CPU/Memory performance/density. (Java, Mail, Web, DB)
+* SPECVirt - Bundles SPECweb, SPECmail, AppServer, CPU bechmarks and creates a tile-base measure of performance/density
 * TPCx-V - Measures density of VMs running OLTP workloads. Hypervisor agnostic
 * TPCx-HCI  - Measures density of VMs running OLTP workloads on HCI infrastructure.  Hypervisor agnostic.
-
 
 
 
