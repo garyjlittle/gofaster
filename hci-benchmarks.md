@@ -8,7 +8,7 @@
     + [Application Benchmarks](#application-benchmarks-1)
     + [Virtualization Benchmarks](#virtualization-benchmarks)
 
-# Benchmarks
+# Benchmarks for hyper-converged infrastructure
 
 ## Benchmarks and workloads
 There is no shortage of  benchmarks and workload generators, I group them into the following categories
@@ -19,7 +19,7 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 #### Workload Benchmarks
 * SFS 97/2008 - simulates the IO workload pattern of an email server
 * SFS 2016? - varios IO profiles
-* SPC-1 - simulates database workloads.
+* SPC-1/SPC-2 - simulates database workloads. SPC-1 simulates an OLTP IO workload, SPC-2 sequential IO workload.
 
 ### IO / Storage Workload Generators - Create your own workload pattern
 * IOmeter - one of the most well-known, popular with Windows users.  Allows client-server deployment
