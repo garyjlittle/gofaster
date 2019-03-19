@@ -11,7 +11,9 @@
 # Benchmarks for hyper-converged infrastructure
 
 ## Benchmarks and workloads
-There is no shortage of  benchmarks and workload generators, I group them into the following categories
+There is no shortage of  benchmarks and workload generators that can conveivably be used to measure hyper-converged infrastructure (HCI).  Broadly HCI benchmarks measure either the storage component (how fast), or the hypervisor component (how dense). 
+
+Storage benchmarks have been traditionally of interest because HCI is most different from traditional data-center architecture in the way that storage is provisioned.  HCI vendors typically provide their own distributed storage abstraction, which provides the bulk of the propritory IP.  For example Nutanix provides NDSF (Nutanix Distributed Storage Fabric), VMware has vSAN (Virtual SAN) and Cisco Hyperflex provide HX Data-platform.
 
 ### IO / Storage Benchmarks - Simulate a particular application or workload
 #### Application Benchmarks
@@ -43,8 +45,32 @@ There is no shortage of  benchmarks and workload generators, I group them into t
 * TPCx-HCI  - Measures density of VMs running OLTP workloads on HCI infrastructure.  Hypervisor agnostic.
 
 
+## Choosing an IO benchmark
+### Pitfalls and Anti-patterns
+Choosing an IO benchmark for HCI evaluation will usually differ from benchmarks that have been used to test traditional storage.  The main reason is that in HCI storage is distributed among many nodes.  Taking a well known and respected benchmark such as SPC-1 and running it on an HCI cluster will not yield the expected results.  SPC-1 excpects to have the workload executed on a host machine, conntected to a single large storage device.  In HCI every host is connected to a relatively small distributed storage device.  
 
+The power of HCI comes from the aggregation of many nodes in a cluster.  A benchmark such as SPC-1 would easily exhaust the local resources of the node where the benchmark is running, but leave many of the nodes idle.  Some HCI offerings such as Nutanix can be configured to operate as a single-large storage cluster, but this is not the normal deployment mode.
 
+The same can be said for running any benchmark or workload which only executes on a single host. Results again are likely to vastly underestimate the total cluster capacity.  I conducted an experiment which shows just how much the capacity of an  HCI cluster can be reported : https://www.n0derunner.com/2018/11/you-are-here-the-art-of-hci-performance-testing/
+
+In this test, we see that a single host issuing a low-concurrency workload might yield only 2500 IOPS (at 400uSec), but the cluster as a whole is capable of >600,000 IOPS at 800uSec.
+
+### Testing HCI the right way.
+To test the performance capacity of an HCI cluster, the workload should be generated on every node in the cluster.  This is how work will be generated in a production environment.  Unfortunately this requires coordinating the creation of multiple VMs across multiple nodes and aggregating the results.
+
+Workload generators such as IOmeter, fio and vdbench support client-server configurations but much of the burden of setup and coordination is placed on the user.
+
+The leading HCI vendors all provide tools for carrying out distributed load/performance testing.  We will cover them here
+
+### HCI specific performance test tools
+The major vendors provide the following tools, all of which support the ability to provision multiple worker VMs across the cluster and execute workload patterns.
+
+* Nutanix : X-Ray
+* vmWare : HCIbench
+* Cisco : HXbench
+
+### HCI specific availability test tools
+Only Nutanix X-Ray....
 
 ```
 Proof of Concept
