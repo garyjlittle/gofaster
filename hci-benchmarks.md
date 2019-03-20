@@ -75,6 +75,7 @@ HCIbench is a tool from VMware that can be run against any VMware base virtualiz
 #### Workload generator
 HCIbench uses the vdbench workload generator.  Users can create the workload pattern via a web-form. e.g. 
 <img src="https://github.com/garyjlittle/images/blob/master/HCIbench-vdbench-parameter-page.png" width="300" height="600">
+
 Currently all worker VMs must run the same workload.  This makes it impossible to run noisy neighbor tests where VMs on the same cluster have diferent characteristics.  e.g. VDI users (bootstorm) on an OLTP database, or a DSS workload running a large querey on the same cluster as a latency sensitive EMR workload.
 #### Failure modes
 HCIbench does not support failing hardware during test.
