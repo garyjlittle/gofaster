@@ -74,10 +74,23 @@ HCIbench is a tool from VMware that can be run against any VMware base virtualiz
 
 #### Workload generator
 HCIbench uses the vdbench workload generator.  Users can create the workload pattern via a web-form. e.g. 
-<img src="https://github.com/garyjlittle/images/blob/master/HCIbench-vdbench-parameter-page.png">
+<img src="https://github.com/garyjlittle/images/blob/master/HCIbench-vdbench-parameter-page.png" width="300" height="600">
+Currently all worker VMs must run the same workload.  This makes it impossible to run noisy neighbor tests where VMs on the same cluster have diferent characteristics.  e.g. VDI users (bootstorm) on an OLTP database, or a DSS workload running a large querey on the same cluster as a latency sensitive EMR workload.
+#### Failure modes
+HCIbench does not support failing hardware during test.
 
-### HCI specific availability test tools
-Only Nutanix X-Ray....
+### X-Ray
+X-Ray is a tool from Nutanix that can run on multiple hypervisors and virtualization platforms
+* Nutanix (AHV or ESXi) with vCenter or PRISM
+* vmware VSAN on ESXi with vCenter
+* Cisco Hyperflex with vCenter
+* Microsoft Hyper-V on Storage spaces direct with SCVMM
+
+#### Workload generator
+X-Ray uses the fio workload generator.  Users can specify the workload pattern using standard fio configuration files, and yaml to describe how to place VMs within the cluster.  It is possible to have different workloads running concurrently.  e.g. it's possible to run VDI users on 3 nodes, and an OLTP workload on another, or an OLTP on two nodes and DSS workloads on four nodes.  Currently the fio and YAML files must be edited outside the web browser.
+#### Failure modes
+X-Ray can be configured to connect to the out-of-band host management infrastructure so that power-failure test can be executed while the cluster is under load.
+
 
 ```
 Proof of Concept
