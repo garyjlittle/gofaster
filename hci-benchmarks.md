@@ -126,7 +126,7 @@ X-Ray uses the fio workload generator.  Users can specify the workload pattern u
 X-Ray does a good job of provisioning worker VMs.  Each VM can have a different layout, e.g, number and size of disks, CPU, memory allocation.
 #### Multiple distinct workloads
 It is possible to have different workloads running concurrently.  e.g. it's possible to run VDI users on 3 nodes, and an OLTP workload on another, or an OLTP on two nodes and DSS workloads on four nodes.  Currently the fio and YAML files must be edited outside the web browser.
-<img src="https://github.com/garyjlittle/images/blob/master/X-Ray%20Distinct%20vm%20configuration%20.png>
+<img src="https://github.com/garyjlittle/images/blob/master/X-Ray%20Distinct%20vm%20configuration%20.png" width="200" height="300">
 #### Failure modes
 X-Ray can be configured to connect to the out-of-band host management infrastructure so that power-failure test can be executed while the cluster is under load.
 #### Scenarios
