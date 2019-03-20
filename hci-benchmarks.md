@@ -69,6 +69,13 @@ The major vendors provide the following tools, all of which support the ability 
 * vmWare : HCIbench
 * Cisco : HXbench
 
+#### HCIbench
+HCIbench is a tool from VMware that can be run against any VMware base virtualization platform.  It cannot run against other hypervisors, as it relys on vCenter to provision the VMs.  
+
+#### Workload generator
+HCIbench uses the vdbench workload generator.  Users can create the workload pattern via a web-form. e.g. 
+![HCIbench Parameter Page](https://www.n0derunner.com/wp-content/uploads/2019/03/HCIbench-vdbench-parameter-page.png)
+
 ### HCI specific availability test tools
 Only Nutanix X-Ray....
 
