@@ -74,7 +74,7 @@ HCIbench is a tool from VMware that can be run against any VMware base virtualiz
 
 #### Workload generator
 HCIbench uses the vdbench workload generator.  Users can create the workload pattern via a web-form. e.g. 
-![HCIbench Parameter Page](https://www.n0derunner.com/wp-content/uploads/2019/03/HCIbench-vdbench-parameter-page.png)
+<img src="https://github.com/garyjlittle/images/blob/master/HCIbench-vdbench-parameter-page.png">
 
 ### HCI specific availability test tools
 Only Nutanix X-Ray....
