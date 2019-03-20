@@ -84,8 +84,10 @@ HCIbench uses the vdbench workload generator.  Users can create the workload pat
 <img src="https://github.com/garyjlittle/images/blob/master/HCIbench-vdbench-parameter-page.png" width="300" height="600">
 #### Provisioning multiple worker VMs
 HCIbench does a good job or provisioning multiple VMs to generate work across the cluster.  All VMs must be uniform.
+<img src="https://github.com/garyjlittle/images/blob/master/HCIbench-deploying-VMs.png" width="300" height="200">
 #### Multiple, distinct workloads
 Currently all worker VMs must run the same workload.  This makes it impossible to run noisy neighbor tests where VMs on the same cluster have diferent characteristics.  e.g. VDI users (bootstorm) on an OLTP database, or a DSS workload running a large querey on the same cluster as a latency sensitive EMR workload.
+<img src="https://github.com/garyjlittle/images/blob/master/HCIbench-select-vdbench-parameter-file.png">
 #### Failure modes
 HCIbench does not support failing hardware during test.
 #### Scenarios
