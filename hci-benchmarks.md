@@ -60,7 +60,14 @@ To test the performance capacity of an HCI cluster, the workload should be gener
 
 Workload generators such as IOmeter, fio and vdbench support client-server configurations but much of the burden of setup and coordination is placed on the user.
 
-The leading HCI vendors all provide tools for carrying out distributed load/performance testing.  We will cover them here
+The leading HCI vendors all provide tools for carrying out distributed load/performance testing.  We will cover them here.
+
+From the HCIbench user guide.
+
+_"In a hyper-converged architecture, each server is intended to support both many application VMs, as well as contribute to the pool of storage available to applications. This is best modeled by invoking many dozens of test VMs, each accessing multiple stored VMDKs. The goal is to simulate a very busy cluster.
+Unfortunately, popular storage performance testing tools do not directly support this kind of model. To achieve a simulation of a busy production cluster, much effort is required to automate load generation, monitoring and data collection after the fact. These steps waste so much valuable time available to do actual testing, even worse may introduce errors into the process.
+To address this situation, VMware released a storage performance testing automation tool— HCIBench—that automates the use of the popular Vdbench testing tool in larger clusters. Users simply specify the testing parameters they would like to run, and HCIBench instructs Vdbench what to do on each and every node in the cluster.
+HCIBench aims to simplify and accelerate customer Proof of Concept (POC) performance testing in a consistent and controlled way. This tool fully automates the end-to-end process of deploying test VMs, coordinating workload runs, aggregating test results, and collecting necessary data for troubleshooting purposes. Evaluators choose the profiles they are interested in; HCIBench does the rest quickly and easily."_
 
 ### HCI specific performance test tools
 The major vendors provide the following tools, all of which support the ability to provision multiple worker VMs across the cluster and execute workload patterns.
@@ -91,6 +98,24 @@ X-Ray is a tool from Nutanix that can run on multiple hypervisors and virtualiza
 X-Ray uses the fio workload generator.  Users can specify the workload pattern using standard fio configuration files, and yaml to describe how to place VMs within the cluster.  It is possible to have different workloads running concurrently.  e.g. it's possible to run VDI users on 3 nodes, and an OLTP workload on another, or an OLTP on two nodes and DSS workloads on four nodes.  Currently the fio and YAML files must be edited outside the web browser.
 #### Failure modes
 X-Ray can be configured to connect to the out-of-band host management infrastructure so that power-failure test can be executed while the cluster is under load.
+#### Scenarios
+One way that X-Ray is different than most workload generators, even with orchestration such as HCIBench is that X-Ray fundamentally uses the idea of a test scenario, which comprises fo _workloads_ and _workflows_ .  The _workload_ is typlically one or more VMs running various IO mixes to simulate application work.  The _workflow_ is something like VDI Bootstorm - which means X-Ray will simultaneously boot all the VDI VMs (which could be serveral hundred).  Or it could be simulating a failure, or an rolling-upgrade of the cluster.
+
+### Installing and using X-Ray
+#### Pre-requisites
+##### X-Ray VM location
+To use __all__ of the X-Ray functionality we require that X-Ray be run externally to the cluster under test.  The X-Ray VM need not be on an HCI cluster, in fact it is quite normal to run the X-Ray VM on a laptop.  The X-Ray VM will communicate with the cluster manager (vCenter, Prism, SCVMM) and upload the base vm images, to the cluster under test.
+##### X-Ray network requirements
+X-Ray simulates applications, rather than aggregations of applications, so for instance to simulate 100 VDI users on a host, we provision 100 VDI VMs and each VM does 1 Desktops IO pattern.  For very large VDI installs there will be a requirement for 100's of IP addresses.  The IP addresses can either be provided via DHCP, or using non-routable zeroconf.  If zeroconf is used - the X-Ray VM will need to be on the same layer-2 network as the X-Ray worker VMs, since X-Ray VM and X-Ray workers need to communicate.
+
+### Install videos
+This is best shown as a video
+* Connecting to the X-Ray VM and adding a target
+* Running an X-Ray test, simple IO performance
+* Running an X-Ray test scenario demonstrating noisy neighbor behavior
+* Running an X-Ray test scenario demonstrating failure 
+
+
 
 
 ```
