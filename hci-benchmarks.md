@@ -11,7 +11,7 @@
     + [Pitfalls and Anti-patterns](#pitfalls-and-anti-patterns)
     + [Testing HCI the right way.](#testing-hci-the-right-way)
     + [HCI specific performance test tools](#hci-specific-performance-test-tools)
-      - [HCIbench](#hcibench)
+    + [HCIbench](#hcibench)
       - [Workload generator](#workload-generator)
       - [Provisioning multiple worker VMs](#provisioning-multiple-worker-vms)
       - [Multiple, distinct workloads](#multiple--distinct-workloads)
@@ -28,9 +28,7 @@
         * [X-Ray VM location](#x-ray-vm-location)
         * [X-Ray network requirements](#x-ray-network-requirements)
     + [Install videos](#install-videos)
-
-
-# Benchmarks for hyper-converged infrastructure
+    # Benchmarks for hyper-converged infrastructure
 
 ## Benchmarks and workloads
 There is no shortage of  benchmarks and workload generators that can conveivably be used to measure hyper-converged infrastructure (HCI).  Broadly HCI benchmarks measure either the storage component (how fast), or the hypervisor component (how dense). 
@@ -98,7 +96,7 @@ The major vendors provide the following tools, all of which support the ability 
 * vmWare : HCIbench
 * Cisco : HXbench
 
-#### HCIbench
+### HCIbench
 HCIbench is a tool from VMware that can be run against any VMware base virtualization platform.  It cannot run against other hypervisors, as it relys on vCenter to provision the VMs.  
 
 #### Workload generator
