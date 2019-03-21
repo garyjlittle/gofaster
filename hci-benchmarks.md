@@ -12,22 +12,8 @@
     + [Testing HCI the right way.](#testing-hci-the-right-way)
     + [HCI specific performance test tools](#hci-specific-performance-test-tools)
     + [HCIbench](#hcibench)
-      - [Workload generator](#workload-generator)
-      - [Provisioning multiple worker VMs](#provisioning-multiple-worker-vms)
-      - [Multiple, distinct workloads](#multiple--distinct-workloads)
-      - [Failure modes](#failure-modes)
-      - [Scenarios](#scenarios)
     + [X-Ray](#x-ray)
-      - [Workload generator](#workload-generator-1)
-      - [Provisioning multiple worker VMs](#provisioning-multiple-worker-vms-1)
-      - [Multiple distinct workloads](#multiple-distinct-workloads)
-      - [Failure modes](#failure-modes-1)
-      - [Scenarios](#scenarios-1)
-    + [Installing and using X-Ray](#installing-and-using-x-ray)
-      - [Pre-requisites](#pre-requisites)
-        * [X-Ray VM location](#x-ray-vm-location)
-        * [X-Ray network requirements](#x-ray-network-requirements)
-    + [Install videos](#install-videos)
+   
     # Benchmarks for hyper-converged infrastructure
 
 ## Benchmarks and workloads
