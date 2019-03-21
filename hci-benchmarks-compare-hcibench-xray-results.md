@@ -20,6 +20,11 @@ fui manual (many, e.g.) : https://media.readthedocs.org/pdf/fio/latest/fio.pdf
 |Size of Disk | size | size|
 
 #### HCIbench result.
-This chart generated from the HCIbench Excell sheet.
+This chart generated from the HCIbench Excel sheet.  There are three individual runs, with the "Fill=Random" used to ensure data is actually written to the SSDs.  There is one outlier datapoint (blue line) but generally there is very little variation.
 
 <img src="https://github.com/garyjlittle/images/blob/master/HCIbench-random-read.png">
+
+#### X-Ray Result
+This chart is generated automatically in X-Ray.
+
+<img src="https://github.com/garyjlittle/images/blob/master/X-Ray-HCIbench-simulation.png">
