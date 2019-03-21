@@ -7,7 +7,7 @@
   * [Orchestrators](#orchestrators)
     + [Application Benchmarks](#application-benchmarks-1)
     + [Virtualization Benchmarks](#virtualization-benchmarks)
-  * [Choosing an IO benchmark](#choosing-an-io-benchmark)
+  * [Choosing a HCI benchmark](#choosing-a-hci-benchmark)
     + [Pitfalls and Anti-patterns](#pitfalls-and-anti-patterns)
     + [Testing HCI the right way.](#testing-hci-the-right-way)
   * [HCI specific performance test tools](#hci-specific-performance-test-tools)
@@ -51,7 +51,7 @@ Storage benchmarks have been traditionally of interest because HCI is most diffe
 * TPCx-HCI  - Measures density of VMs running OLTP workloads on HCI infrastructure.  Hypervisor agnostic.
 
 
-## Choosing an IO benchmark
+## Choosing a HCI benchmark
 ### Pitfalls and Anti-patterns
 Choosing an IO benchmark for HCI evaluation will usually differ from benchmarks that have been used to test traditional storage.  The main reason is that in HCI storage is distributed among many nodes.  Taking a well known and respected benchmark such as SPC-1 and running it on an HCI cluster will not yield the expected results.  SPC-1 excpects to have the workload executed on a host machine, conntected to a single large storage device.  In HCI every host is connected to a relatively small distributed storage device.  
 
