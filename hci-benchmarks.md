@@ -137,7 +137,8 @@ X-Ray can be configured to connect to the out-of-band host management infrastruc
 #### Scenarios
 One way that X-Ray is different than most workload generators, even with orchestration such as HCIBench is that X-Ray fundamentally uses the idea of a test scenario, which comprises fo _workloads_ and _workflows_ .  The _workload_ is typlically one or more VMs running various IO mixes to simulate application work.  The _workflow_ is something like VDI Bootstorm - which means X-Ray will simultaneously boot all the VDI VMs (which could be serveral hundred).  Or it could be simulating a failure, or an rolling-upgrade of the cluster.
 
-
+#### Installing and running X-ray 
+See [here](hci-benchmarks-xray.md)
 
 ```
 Proof of Concept
