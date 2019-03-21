@@ -76,11 +76,15 @@ To address this situation, VMware released a storage performance testing automat
 HCIBench aims to simplify and accelerate customer Proof of Concept (POC) performance testing in a consistent and controlled way. This tool fully automates the end-to-end process of deploying test VMs, coordinating workload runs, aggregating test results, and collecting necessary data for troubleshooting purposes. Evaluators choose the profiles they are interested in; HCIBench does the rest quickly and easily."_
 
 ### HCI specific performance test tools
-The major vendors provide the following tools, all of which support the ability to provision multiple worker VMs across the cluster and execute workload patterns.
+The major HCI vendors provide benchmark tools, all of which support the ability to provision multiple worker VMs across the cluster and execute workload patterns.  Running a simple IOPS test should return uniform results across all the tools - since the tool itself should not determine the benchmark result.
 
 * Nutanix : X-Ray
 * vmWare : HCIbench
 * Cisco : HXbench
+
+In a simple test, performing 4K random reads on a Nutanix HCI cluster, we put this theory to the test.  The results for the exact same configuration between HCIbench and X-Ray yields the following results.
+
+[Compare HICbench and X-Ray results](hci-benchmarks-compare-hcibench-xray-results.md)
 
 ### HCIbench
 HCIbench is a tool from VMware that can be run against any VMware base virtualization platform.  It cannot run against other hypervisors, as it relys on vCenter to provision the VMs.  
