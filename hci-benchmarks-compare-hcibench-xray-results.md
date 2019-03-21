@@ -32,6 +32,29 @@ This chart is generated automatically in X-Ray.
 
 <img src="https://github.com/garyjlittle/images/blob/master/X-Ray-HCIbench-simulation.png">
 
+#### HCIbench vdbench configuration
+```
+root@photon-HCIBench [ /opt/automation/vdbench-param-files ]# cat vdb-8vmdk-100ws-4k-100rdpct-100randompct-8threads 
+*Auto Generated VDBench Parameter File
+*8 raw disk, 100% random, 100% read
+*SD:    Storage Definition
+*WD:    Workload Definition
+*RD:    Run Definition
+debug=86
+data_errors=10000
+sd=sd1,lun=/dev/sda,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd2,lun=/dev/sdb,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd3,lun=/dev/sdc,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd4,lun=/dev/sdd,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd5,lun=/dev/sde,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd6,lun=/dev/sdf,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd7,lun=/dev/sdg,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+sd=sd8,lun=/dev/sdh,openflags=o_direct,hitarea=0,range=(0,100),threads=8
+wd=wd1,sd=(sd1,sd2,sd3,sd4,sd5,sd6,sd7,sd8),xfersize=4k,rdpct=100,seekpct=100
+rd=run1,wd=wd1,iorate=max,elapsed=300,warmup=60,interval=1
+```
+
+
 #### X-Ray fio configuration
 GLittleDRM-MBP:HCIbench-clone gary.little$ cat random_read.fio 
 ```
