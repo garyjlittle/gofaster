@@ -10,11 +10,11 @@
   * [Choosing an IO benchmark](#choosing-an-io-benchmark)
     + [Pitfalls and Anti-patterns](#pitfalls-and-anti-patterns)
     + [Testing HCI the right way.](#testing-hci-the-right-way)
-    + [HCI specific performance test tools](#hci-specific-performance-test-tools)
+  * [HCI specific performance test tools](#hci-specific-performance-test-tools)
     + [HCIbench](#hcibench)
     + [X-Ray](#x-ray)
    
-    # Benchmarks for hyper-converged infrastructure
+# Benchmarks for hyper-converged infrastructure
 
 ## Benchmarks and workloads
 There is no shortage of  benchmarks and workload generators that can conveivably be used to measure hyper-converged infrastructure (HCI).  Broadly HCI benchmarks measure either the storage component (how fast), or the hypervisor component (how dense). 
