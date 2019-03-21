@@ -14,5 +14,12 @@ fui manual (many, e.g.) : https://media.readthedocs.org/pdf/fio/latest/fio.pdf
 |IO size | xfersize|bs |
 |Concurrency| threads | iodepth|
 |Read/Write Mix | rdpct| rwmixread|
+|Sequential/Random Mix | seekpct | percent_random|
 |Ensure O_DIRECT| openflags=o_direct  | direct=1|
 |Ensure ASYNC_IO|  | ioengine=libaio |
+|Size of Disk | size | size|
+
+#### HCIbench result.
+This chart generated from the HCIbench Excell sheet.
+
+<img src="https://github.com/garyjlittle/images/blob/master/HCIbench-random-read.png">
