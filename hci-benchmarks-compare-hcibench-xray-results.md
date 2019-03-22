@@ -1,7 +1,7 @@
 # Comparing HCIbench and X-Ray
 ### Simple IOPS tests
 
-For simple IOPS based tests, where all VMs run the same workloads, it should be possible to compare the results of the two tools. Given an identical offered workload, e.g. same queue-depth, IO size and working-set-size  the results should be very similar.  The real result is that X-Ray/fio is slightly faster (10%) which I put down to the fact that the response times are quite low, and so the performance of the workload generator comes in to play.  The data suggests that for very low-latency workload generation fio is a bit quicker than vdbench.
+For simple IOPS based tests, where all VMs run the same workloads, it should be possible to compare the results of the two tools. Given an identical offered workload, e.g. same queue-depth, IO size and working-set-size  the results should be very similar.  The experimental result shows that X-Ray/fio is slightly faster (10%) which I put down to the fact that the response times are quite low, and so the performance of the workload generator comes in to play.  The data suggests that for very low-latency workload generation fio is a bit quicker than vdbench.
 
 The underlying IO generators (vdbench for HCIbench and fio for X-Ray) use different syntax, and terminology.  Use this handy lookup to decode what's what.
 
