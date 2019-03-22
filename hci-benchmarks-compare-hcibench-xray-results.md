@@ -1,7 +1,7 @@
 # Comparing HCIbench and X-Ray
 ### Simple IOPS tests
 
-For simple IOPS based tests, where all VMs run the same workloads, it should be possible to compare the results of the two tools.  
+For simple IOPS based tests, where all VMs run the same workloads, it should be possible to compare the results of the two tools. Given an identical offered workload, e.g. same queue-depth, IO size and working-set-size  the results should be very similar.  The real result is that X-Ray/fio is slightly faster (10%) which I put down to the fact that the response times are quite low, and so the performance of the workload generator comes in to play.  The data suggests that for very low-latency workload generation fio is a bit quicker than vdbench.
 
 The underlying IO generators (vdbench for HCIbench and fio for X-Ray) use different syntax, and terminology.  Use this handy lookup to decode what's what.
 
@@ -16,11 +16,11 @@ fui manual (many, e.g.) : https://media.readthedocs.org/pdf/fio/latest/fio.pdf
 |Read/Write Mix | rdpct| rwmixread|
 |Sequential/Random Mix | seekpct | percent_random|
 |Ensure O_DIRECT| openflags=o_direct  | direct=1|
-|Ensure ASYNC_IO|  | ioengine=libaio |
+|Ensure ASYNC_IO| N/A | ioengine=libaio |
 |Size of Disk | size | size|
 
 #### HCIbench result.
-This chart generated from the HCIbench Excel sheet.  There are three individual runs, with the "Fill=Random" used to ensure data is actually written to the SSDs.  There is one outlier datapoint (blue line) but generally there is very little variation.
+This chart generated from the HCIbench Excel sheet.  There are three individual runs, with the "Fill=Random" used to ensure data is actually written to the SSDs.  There is one outlier datapoint (blue line) but generally there is very little variation.  The median figure is about 500,000 IOPS on a 4 node cluster with a queue depth of 64 per node.
 
 <img src="https://github.com/garyjlittle/images/blob/master/HCIbench-random-read.png">
 
@@ -28,7 +28,7 @@ This chart generated from the HCIbench Excel sheet.  There are three individual 
 
 
 #### X-Ray Result
-This chart is generated automatically in X-Ray.
+This chart is generated automatically in X-Ray. The workload configuration is the same (the fio and vdbench files are shown below.  X-Ray generates a slightly higher IOP value (+10%) than HCIbench.  I expect that this is due to the slightly higher CPU usage demanded by vdbench compared to fio which is a bit more efficient.
 
 <img src="https://github.com/garyjlittle/images/blob/master/X-Ray-HCIbench-randread-simulation.png">
 
