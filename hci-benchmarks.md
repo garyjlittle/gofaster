@@ -130,15 +130,3 @@ One way that X-Ray is different than most workload generators, even with orchest
 #### Installing and running X-ray 
 See [here](hci-benchmarks-xray.md)
 
-```
-Proof of Concept
-·         Intro to different benchmarking tools (, , , , , , etc.)
-o    Gary Little
-o    Conversational/supporting materials
-o    Does it have a place in evaluating HCI or not?
-·         Installing/configuring X-Ray (not on target cluster, network/DHCP requirements, IPMI requirements, cloning/editing scenarios)
-o    Reference product documentation
-o    Matt will look for existing install video
-·         X-Ray test scenario overview - what each test aims to demonstrate, why are the testing parameters reasonable, what we use to generate workloads, open source/customizable
-·         Analyzing X-Ray test results - Speaking to the example X-Ray results for each test, why it looks the way it does, how/why we would (generically) expect competitors to have issues
-```
