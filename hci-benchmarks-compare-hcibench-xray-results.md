@@ -30,7 +30,7 @@ This chart generated from the HCIbench Excel sheet.  There are three individual 
 #### X-Ray Result
 This chart is generated automatically in X-Ray.
 
-<img src="https://github.com/garyjlittle/images/blob/master/X-Ray-HCIbench-simulation.png">
+<img src="https://github.com/garyjlittle/images/blob/master/X-Ray-HCIbench-randread-simulation.png">
 
 #### HCIbench vdbench configuration
 ```
