@@ -7,8 +7,8 @@ For simple IOPS based tests, where all VMs run the same workloads, it should be 
 
 The underlying IO generators (vdbench for HCIbench and fio for X-Ray) use different syntax, and terminology.  Use this handy lookup to decode what's what.
 
-vdbench manual May 2018 (gated by Oracle login) : http://download.oracle.com/otn/utilities_drivers/vdbench/vdbench-50407.pdf
-fui manual (many, e.g.) : https://media.readthedocs.org/pdf/fio/latest/fio.pdf
+* vdbench manual May 2018 (gated by Oracle login) : http://download.oracle.com/otn/utilities_drivers/vdbench/vdbench-50407.pdf
+* fio manual (various, e.g.) : https://media.readthedocs.org/pdf/fio/latest/fio.pdf
 
 
 |Thing | vdbench | fio |
