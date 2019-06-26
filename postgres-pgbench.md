@@ -49,5 +49,11 @@ sudo -u postgres pgbench -T 60 -P 5 -j 16 -c 4 pgbench-sf100
 ## Scale Factor notes
 
 SF500 - On Disk= 7.4G (du on data/base/<top of tree>) - top VIRT=188644 - RSS=145200 [Restricted by config?,meminfo shows 11GB cached]
-
-
+```
+SF - On-Disk Size
+10000. 
+ 5000. 63G
+ 1000. 15G
+  500. 7.4G
+  100. 1.7G
+```
