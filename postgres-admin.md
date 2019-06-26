@@ -14,7 +14,13 @@ postgres=# select oid,datname from pg_database;
  16437 | pgbench-sf1000
  16454 | pgbench-sf500
  ```
- 
+ ## Databases
+ ### Drop a database
+```
+postgres=# drop database "pgbench-sf1000";
+DROP DATABASE
+```
+
 ## Passwords
 ### Change postgres password
 * e.g. set password to 'pg'
