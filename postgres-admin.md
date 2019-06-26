@@ -1,4 +1,20 @@
 # Postgres admin tasks
+## Data locations
+### Locations for specific databases
+```
+postgres=# select oid,datname from pg_database; 
+  oid  |    datname     
+-------+----------------
+ 12368 | postgres
+ 16384 | pgbench-sf1
+     1 | template1
+ 12367 | template0
+ 16385 | pgbench-sf10
+ 16386 | pgbench-sf100
+ 16437 | pgbench-sf1000
+ 16454 | pgbench-sf500
+ ```
+ 
 ## Passwords
 ### Change postgres password
 * e.g. set password to 'pg'
