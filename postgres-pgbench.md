@@ -14,9 +14,9 @@ Whenever I do postgres/pgbench testing I am usually trying to compare performanc
 ```
 * "pgbench -i. <name> -s <num>" means initialize a database schema with <name> and scale factor <num>
 ```
-$ sudo -u postgres pgbench -i pgbench-sf1 -s 1
-$ sudo -u postgres pgbench -i pgbench-sf10 -s 10 
-$ sudo -u postgres pgbench -i pgbench-sf100 -s 100
+$ sudo -u postgres pgbench -i -s 1 pgbench-sf1 
+$ sudo -u postgres pgbench -i -s 10 pgbench-sf10
+$ sudo -u postgres pgbench -i -s 100 pgbench-sf100
 ```
 ## Run the benchmark
 Normally I want run the benchmark for a specific period of time.
