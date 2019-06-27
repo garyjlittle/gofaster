@@ -52,7 +52,7 @@ SF500 - On Disk= 7.4G (du on data/base/<top of tree>) - top VIRT=188644 - RSS=14
 ```
 SF - On-Disk Size
 10000. 
- 5000. 63G
+ 5000. 74G
  1000. 15G
   500. 7.4G
   100. 1.7G
